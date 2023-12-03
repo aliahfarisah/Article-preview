@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Very_Dark_Grayish_Blue: hsl(217, 19%, 35%);
+  --Desaturated_Dark_Blue: hsl(214, 17%, 51%);
+  --Grayish_Blue: hsl(212, 23%, 69%);
+  --Light_Grayish_Blue: hsl(210, 46%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 13px;
+  background-color: var(--Light_Grayish_Blue);
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  width: 870px;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 40px 40px -10px rgba(193, 205, 216, 0.503);
+}
+
+.image {
+  background-image: url(./images/drawers.jpg);
+  border-radius: 10px 0 0 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 360px;
+}
+
+.text {
+  width: 510px;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  color: var(--Very_Dark_Grayish_Blue);
+  margin-bottom: 20px;
+}
+
+.description {
+  color: var(--Desaturated_Dark_Blue);
+  line-height: 20px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+}
+
+.images {
+  display: flex;
+}
+
+.images img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.name-date {
+  margin-left: 15px;
+  line-height: 20px;
+}
+
+.name {
+  color: var(--Very_Dark_Grayish_Blue);
+  font-weight: 700;
+}
+
+.date {
+  color: var(--Grayish_Blue);
+}
+
+button {
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  background-color: var(--Light_Grayish_Blue);
+  cursor: pointer;
+}
+
+.share {
+  position: relative;
+}
+
+.balloon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -90px;
+  left: -105px;
+  background-color: var(--Very_Dark_Grayish_Blue);
+  gap: 15px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  visibility: hidden;
+}
+
+.balloon p {
+  letter-spacing: 4px;
+  color: var(--Grayish_Blue);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid var(--Very_Dark_Grayish_Blue);
+  position: absolute;
+  top: -31px;
+  left: 5px;
+  visibility: hidden;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: block;
+    width: 351px;
+    height: 520px;
+  }
+
+  .image {
+    background-image: url(./images/drawers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 351px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .text {
+    width: 351px;
+    padding: 36px 32px 20px 32px;
+  }
+
+  .heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .description {
+    letter-spacing: 0.7px;
+  }
+}
